@@ -30,23 +30,6 @@ pair<int*,int*> Extended_Bottom_Up_Cut_Rod(int* p,int n)
     }
     return a;
 }
-/*
-int Bottom_Up_Cut_Rod(int* p,int n)
-{
-    int q;
-    int r[n];
-    r[0]=0;
-    q=-9999;
-    for(int j=0;j<n;j++)
-    {
-        for(int i=0;i<=j;i++)
-        {
-            q=max(q,p[i]+r[j-i]);
-        }
-        r[j+1]=q;
-    }
-    return q;
-}*/
 
 int main()
 {
