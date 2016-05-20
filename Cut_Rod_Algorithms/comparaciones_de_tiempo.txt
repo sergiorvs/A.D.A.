@@ -1,0 +1,18 @@
+COMPARACION DE TIEMPOS:
+/********************************************************/
+Cut_Rod   (Fuersa bruta)
+ Este algoritmo demora 3.6 seg para un arreglo de tamaño 30 y mas de 20 min
+ para un arreglo de tamaño 50, vemos que el tiempo crece de manera exponencial
+ debido a que hace comparciones innecesarias, entre mas grande sea el arreglo
+ hará muchas más comparaciones innecesarias.
+Memoized_Cut_Rod (por memoria)
+ Para un array de 50 elementos, este algoritmo lo devuelve en un tiempo de 
+ 0.0001, este algoritmo mejora bastante al anterior devido a que guarda las
+ consultas que realiza de modo que evita realizar consultas repetidas.
+Bottom_Up_Cut_Rod (De abajo hacia arriba)
+ Este algoritmo realiza la operacion en un tiempo inferior a 0.0001 para un
+ array de 50 elemtos.Este algoritmo parte desde un caso base de modo que solo
+ utiliza lo calculado anteriormente para una consulta actual.
+Extended_Bottom_Up_Cut_Rod 
+ Realiza el mismo proceso que el anterior, solo que guarda todas las posibles
+ consultas para un array n en dos arrays nuevos.
