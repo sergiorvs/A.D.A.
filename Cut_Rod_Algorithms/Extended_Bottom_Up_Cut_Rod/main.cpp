@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 
 using namespace std;
 
@@ -33,20 +34,31 @@ pair<int*,int*> Extended_Bottom_Up_Cut_Rod(int* p,int n)
 
 int main()
 {
-    int p[]={1,5,8,9,10,17,17,20,24,30};
+    cout<<"Hola"<<endl;
+    const double CLK_TCK1 = 1000.0;
+    clock_t start, end;
+    int p[]={1,5,8,9,10,17,17,20,24,30,
+             31,35,40,43,50,57,58,59,63,68,
+             70,73,75,77,80,89,90,93,95,100,
+             105,109,113,125,126,127,130,134,135,136,
+             138,143,147,150,156,159,171,172,174,176};
     pair<int*,int*> a;
-    a=Extended_Bottom_Up_Cut_Rod(p,10);
+    start = clock();
+    a=Extended_Bottom_Up_Cut_Rod(p,50); ///tiempo estimado de 50:  inferior a 0.000100
+    end = clock();
     cout<<"r::::::>";
-    for(int i=0;i<11;i++)
+    for(int i=0;i<31;i++)
     {
         cout<<a.first[i]<<", ";
     }
     cout<<endl;
     cout<<"s::::::>";
-    for(int i=0;i<11;i++)
+    for(int i=0;i<31;i++)
     {
         cout<<a.second[i]<<", ";
     }
+    cout<<endl;
 
+    printf("El tiempo es: %f\n", (end - start) / CLK_TCK1);
     return 0;
 }
